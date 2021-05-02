@@ -13,7 +13,7 @@ import org.jgap.gp.terminal.Variable;
 /**
  * @author Owen Nicholson - 300130635
  * @credit carlos - tutorial code supplied by lecturer
- *
+ * https://cvalcarcel.wordpress.com/2009/08/04/jgap-a-firstsimple-tutorial/
  */
 public class GPMathProblem extends GPProblem {
   @SuppressWarnings("boxing")
@@ -70,19 +70,24 @@ public class GPMathProblem extends GPProblem {
 
   public static void main(String[] args) throws Exception {
 
-    int min = -1;
-    int max = 0;
+    boolean stopAtSolution = false;
+    if(args.length == 1 && args[0].equals("true")){
+      stopAtSolution = true;
+    }
     GPProblem problem = new GPMathProblem();
-
     int generations = 100;
 
     /*
       Iterates over a number of evolutions, 1 at a time, allowing me to check each generation and to determine when the fitness == 0 (correct solution)
 
+      If argument stopAtSolution is true, then cease generations at a fitness of 0.
+
       Commented out lines were used for testing - performs 200 loops, stopping after it finds a best solution and recording how many generations it took.
       Then prints the min and max number of generations.
     */
 
+//    int min = -1;
+//    int max = 0;
 //    for(int r = 0; r < 200; r++) {
 
     GPGenotype gp = problem.create();
@@ -90,20 +95,19 @@ public class GPMathProblem extends GPProblem {
       gp.setVerboseOutput(true);
       gp.evolve(1); // will evolve a single generation each time
 
-//        if (gp.getFittestProgram().getFitnessValue() == 0) {
+        if (stopAtSolution && gp.getFittestProgram().getFitnessValue() == 0) {
 //          if(min == -1){
 //            min = i; max = i;
 //          }
 //          if(i < min) min = i;
 //          if(i > max) max = i;
-//          break;
-//        }
+          break;
+        }
       gp.outputSolution(gp.getAllTimeBest());
     }
 //    }
 //    System.out.println("Min generations: " + min);
 //    System.out.println("Max generations: " + max);
-
   }
 
 }

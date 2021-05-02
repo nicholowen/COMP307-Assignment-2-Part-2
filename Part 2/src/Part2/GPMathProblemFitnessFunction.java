@@ -7,7 +7,7 @@ import org.jgap.gp.terminal.Variable;
 /**
  * @author Owen Nicholson - 300130635
  * @credit carlos - tutorial code supplied by lecturer
- *
+ * https://cvalcarcel.wordpress.com/2009/08/04/jgap-a-firstsimple-tutorial/
  */
 public class GPMathProblemFitnessFunction extends GPFitnessFunction {
 
