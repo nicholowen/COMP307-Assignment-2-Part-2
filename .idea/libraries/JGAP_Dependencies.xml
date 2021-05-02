@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="JGAP Dependencies">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/JGAP/jgap.jar!/" />
+      <root url="file://$PROJECT_DIR$/JGAP/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/JGAP/lib" recursive="false" />
+  </library>
+</component>
