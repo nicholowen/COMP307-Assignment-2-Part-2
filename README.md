@@ -1,5 +1,10 @@
 # COMP307-Assignment-2-Part-2
 
+## Description
+
+Genetic programming using JGAP. This program is to explore the use of genetic programming in order to <br>
+find a mathimatical function that satisfies a given set of inputs and outputs. 
+
 ## Part 1
 ### Instructions:
   Run jar in command line by navigating to jar directory and running '**java -jar part1.jar**'<br>
